@@ -5,6 +5,7 @@ nav {
     padding: 2 rem;
     background-color: #FFFFFF;
     color: #fff;
+    height: 150px; 
   }
   
   img {
@@ -20,7 +21,7 @@ nav {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 3;
   }
   
   li {
@@ -31,5 +32,6 @@ nav {
     color: #0f0e0e;
     text-decoration: none;
     font-size: 25px;
+    margin-left: -80%;
   }
   

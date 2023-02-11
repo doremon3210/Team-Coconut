@@ -101,7 +101,7 @@ const TextFields = () => {
            style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
            />
       </div>
-      <button style={{ width: 100, height: 40, backgroundColor: '#4CAF50', color: '#fff', border: 'none', borderRadius: 5, fontSize: 16, cursor: 'pointer' }}>Submit</button>
+      {/* <button style={{ width: 100, height: 40, backgroundColor: '#4CAF50', color: '#fff', border: 'none', borderRadius: 5, fontSize: 16, cursor: 'pointer' }}>Submit</button> */}
     </form>
   );
 };
