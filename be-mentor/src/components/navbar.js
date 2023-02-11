@@ -1,10 +1,11 @@
 import React from 'react';
-import './navbar.css'
+import './navbar.css';
+import logo from '../logo.png';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>Be Mentor</h1>
+      <img src={logo} alt="Logo" />
       <ul>
         <li>
           <a href="#">Home</a>
@@ -17,7 +18,6 @@ const Navbar = () => {
         </li>
       </ul>
     </nav>
-    
   );
 };
 
