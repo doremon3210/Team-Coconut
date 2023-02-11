@@ -1,16 +1,15 @@
 import './App.css';
 import Navbar  from './components/navbar.js';
-import Pt1 from './components/identityphoto/identityphoto1';
-import Pt2 from './components/identityphoto/identityphoto2';
-import Pt3 from './components/identityphoto/identityphoto3';
+import Collage from './components/identityphoto/collage';
+import TextFields from './components/textfield';
+
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Pt1 />
-      <Pt2/>
-      <Pt3/>
+     {/* <Collage /> */}
+     <TextFields />
       <header className="App-header">   
       </header>
     </div>
