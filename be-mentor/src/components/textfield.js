@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RightImage from './identityphoto/rightphoto';
+
 
 const TextFields = () => {
   const [field1Value, setField1Value] = useState('');
