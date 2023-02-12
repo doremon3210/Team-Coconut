@@ -1,44 +1,30 @@
 package main
 
 import (
+	"backend/Config"
+	"backend/Routes"
+
 	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
 
+	
+}
 	// using fiber
 
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.JSON(&fiber.Map{"data": "Hello from Fiber & mongoDB"})
-	})
+	// run the database
+	Config.ConnectDB()
+
+	//routes
+	Routes.UserRoute(app)
 
 	app.Listen(":6000")
 
-	/*client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://milamora:qMheja2mFOMGI4i3@cluster0.0b8s1fw.mongodb.net/test"))
-	if err != nil {
-		log.Fatal(err)
-	}
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-	err = client.Connect(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer client.Disconnect(ctx)
-	//ping the databse
-	err = client.Ping(ctx, readpref.Primary())
-	if err != nil {
-		log.Fatal(err)
-	}
-	databases, err := client.ListDatabaseNames(ctx, bson.M{})
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(databases)
-
 	// create mentor and mentee collectioms
-	*/
+
 	/*
 
 		firstDb := client.Database("UserInfo")
