@@ -31,15 +31,16 @@ function Checkbox() {
   };
 
   return (
-    <div style={{ marginLeft: 8, width: 100, display: 'flex' }}> 
+    <div style={{ marginLeft: 8, width: 50, display: 'flex' }}> 
       <form onSubmit={handleSubmit}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'left' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
           <input
             type="checkbox"
             name="item1"
             onChange={handleChange}
-          /> Agriculture, Food, and Natural Resources
+          />
           </div>
+          <p style={{ margin: 0, paddingLeft: 8, display: "inline", width: 150, height: 50, overflow: "hidden" }}>Agriculture, Food, and Natural Resources</p><br/>
         
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
           <input
@@ -62,8 +63,8 @@ function Checkbox() {
             type="checkbox"
             name="item4"
             onChange={handleChange}
-          />Business, Management, and Administration</div>
-          <br/>
+          /></div>
+          <p style={{ margin: 0, paddingLeft: 8 }}>Business, Management, and Administration</p>
         
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
           <input
@@ -80,7 +81,7 @@ function Checkbox() {
             onChange={handleChange}
             ></input>
             </div>
-            <p style={{ margin: 0, paddingLeft: 8 }}>Manufacturing</p>
+            <p style={{ margin: 0, paddingLeft: 8 }}>Business, Management, and Administration</p>
             </form>
             
         </div>
