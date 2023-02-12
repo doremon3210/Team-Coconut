@@ -50,18 +50,54 @@
   margin: 10px;
 }
 
-.text-fields {
+.text-field-container {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding-left: 10px;
-  padding-bottom: 60px;
+  margin: 20px 0;
 }
 
-.text-fields input {
-  width: 30%;
-  margin: 10px;
+.text-field {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e84949;
+  border-radius: 5px;
+  margin: 0 10px;
 }
+
+.text-field:focus {
+  outline: none;
+  border-color: #ce4141;
+}
+
+.submit-button {
+  width: 100px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: #d32626;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #3e8e41;
+}
+.semi-circle {
+  width: 200px;
+  height: 100px;
+  border-radius: 100px 100px 0 0;
+  background-color: blue;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 
 

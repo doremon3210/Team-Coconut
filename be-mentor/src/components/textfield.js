@@ -39,21 +39,69 @@ const TextFields = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="text-fields">
+      <div className="text-fields" style={{ marginLeft: 8 , width: 50, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: '20px 0' }}>
         <input
           type="text"
           placeholder="First Name"
           value={field1Value}
           onChange={handleField1Change}
+          style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
         />
         <input
           type="text"
           placeholder="Last Name"
           value={field2Value}
           onChange={handleField2Change}
+          style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: 10 }}
         />
+        <input
+           type="text"
+           placeholder="Saluation"
+           style={{ width: 100, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+          
+           
+           
       </div>
-      <button type="submit">Submit</button>
+      <div className="text-fields" style={{ marginLeft: 55 ,width: 50, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: '20px 0' }}>
+      <input
+           type="text"
+           placeholder="Date of Birth"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+           <input
+           type="text"
+           placeholder="SSN#"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+      </div>
+      <div className="text-fields" style={{ marginLeft: 55 ,width: 50, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: '20px 0' }}>
+    
+      <input
+           type="text"
+           placeholder="Driver's License#"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+           <input
+           type="text"
+           placeholder="Employer"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+      </div>
+      <div className="text-fields" style={{marginLeft: 55 , width: 50, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: '20px 0' }}>
+      
+      <input
+           type="text"
+           placeholder="Job Title"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+           <input
+           type="text"
+           placeholder="Employment start date"
+           style={{ width: 200, height: 40, padding: 10, fontSize: 16, border: '1px solid #ccc', borderRadius: 5, margin: '0 10px' }}
+           />
+      </div>
+      {/* <button style={{ width: 100, height: 40, backgroundColor: '#4CAF50', color: '#fff', border: 'none', borderRadius: 5, fontSize: 16, cursor: 'pointer' }}>Submit</button> */}
     </form>
   );
 };
