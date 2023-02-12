@@ -1,0 +1,22 @@
+
+// example of user input formatting 
+
+// Mentor
+{
+    "name": "Cami",
+    "careerfield": "Technology",
+    "degree":"Computer science",
+    "middleSchool":"Alachua middle school",
+    "highSchool":"Eastside high school, Florida high school"
+}
+
+// Mentee
+
+{
+    "name":"David",
+    "careerInterest": "Technology",
+    "majorInterest":"computer engineering",
+    "school": "Eastside high school"
+}
+
+
