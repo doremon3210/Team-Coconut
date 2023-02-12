@@ -1,4 +1,4 @@
-package controllers
+package Controller
 
 import (
 	"backend/Config"
@@ -30,19 +30,27 @@ func CreateUser(c *fiber.Ctx) error {
 
 	//use the validator library to validate required fields
 	if validationErr := validate.Struct(&user); validationErr != nil {
-		return c.Status(http.StatusBadRequest).JSON(Responses.UserResponse{Status: http.StatusBadRequest, Message: "error", Data: &fiber.Map{"data": validationErr.Error()}})
+		return c.Status(http.StatusBadRequest).JSON(Responses.UserResponse{Status: http.StatusBadRequest, Message: "var...", Data: &fiber.Map{"data": validationErr.Error()}})
 	}
 
 	newUser := Models.User{
-		Id:       primitive.NewObjectID(),
-		Name:     user.Name,
-		Location: user.Location,
-		Title:    user.Title,
+		Name:                  user.Name,
+		Salutation:            user.Salutation,
+		Date_of_birth:         user.Date_of_birth,
+		Ssn:                   user.Ssn,
+		Id:                    user.Id,
+		Employer_name:         user.Employer_name,
+		Job_title:             user.Job_title,
+		Employment_start_date: user.Employment_start_date,
+		Degree_field:          user.Degree_field,
+		Major:                 user.Major,
+		Middle_school:         user.Middle_school,
+		High_school:           user.High_school,
 	}
 
 	result, err := userCollection.InsertOne(ctx, newUser)
 	if err != nil {
-		return c.Status(http.StatusInternalServerError).JSON(Responses.UserResponse{Status: http.StatusInternalServerError, Message: "error", Data: &fiber.Map{"data": err.Error()}})
+		return c.Status(http.StatusInternalServerError).JSON(Responses.UserResponse{Status: http.StatusInternalServerError, Message: "doesn't work", Data: &fiber.Map{"data": err.Error()}})
 	}
 
 	return c.Status(http.StatusCreated).JSON(Responses.UserResponse{Status: http.StatusCreated, Message: "success", Data: &fiber.Map{"data": result}})
@@ -65,5 +73,5 @@ func GetAUser(c *fiber.Ctx) error {
 }
 
 func GetMentees(c *fiber.Ctx) {
-	// compare the
+	// compare the mentees with one another
 }
